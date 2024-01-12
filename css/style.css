@@ -5,5 +5,67 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+      height: calc(100vh - 100px);
+      color: black;
+      background-color: white;
+      display: flex;
+}
+
+aside {
+      position: relative;
+      width: 200px;
+      background-color: white;
+      min-height: 400px;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+}
+  
+.aside-bottom-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+}
+
+.main-nav-container {
+      display: inline-block;
+      padding: 7px 5px;
+}
+
+.playlist-container {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+}
+      
+.playlist-container ul {
+      overflow-y: auto;
+      flex-grow: 1;
+}
+
+.debug .logo-container {
+      background-color: white;
+      border: none;
+}
+
+.debug .main-nav-container {
+      background-color: white;
+      color: black;
+}
+
+.debug .aside-bottom-info {
+      background-color: white;
+      color: gray;
+}
+
+.debug .playlist-container {
+      background-color: white;
+      color: gray;
 }
