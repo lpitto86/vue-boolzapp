@@ -8,15 +8,28 @@ html {
       font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+      height: calc(20vh);
+      background-color: rgba(0,150,136,1);
+}
+
+body {
+      position: relative;
+      background-color: rgba(216,219,214,1);
+}
+
 #wrapper {
-      height: calc(100vh - 100px);
+      width: calc(90vw - 10px);
+      height: calc(80vh - 20px);
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      border: 1px solid black;
       color: black;
-      background-color: white;
       display: flex;
 }
 
 aside {
-      position: relative;
       width: 200px;
       background-color: white;
       min-height: 400px;
