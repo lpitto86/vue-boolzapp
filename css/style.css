@@ -20,7 +20,6 @@ body {
 
 #chat-container {
       width: calc(90vw - 10px);
-      /*height: calc(80vh - 20px);*/
       position: absolute;
       top: 30%;
       left: 5%;
