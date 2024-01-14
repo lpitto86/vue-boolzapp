@@ -18,19 +18,36 @@ body {
       background-color: rgba(216,219,214,1);
 }
 
-#wrapper {
+#chat-container {
       width: calc(90vw - 10px);
       height: calc(80vh - 20px);
       position: absolute;
       top: 30%;
       left: 5%;
       border: 1px solid black;
+      border-radius: 10px;
       color: black;
       display: flex;
 }
 
+#chat-container > * > header {
+      height: 60px;
+      background-color: beige;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+#notifications-container {
+      background-color: #8edafc;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+}
+
 aside {
-      width: 200px;
+      width: 30%;
       background-color: white;
       min-height: 400px;
       height: 100%;
@@ -38,47 +55,19 @@ aside {
       display: flex;
       flex-direction: column;
 }
-  
-.aside-bottom-info {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-}
 
-.main-nav-container {
-      display: inline-block;
-      padding: 7px 5px;
-}
-
-.playlist-container {
-      flex-grow: 1;
-      overflow: hidden;
+#search-container > .search-input {
+      text-align: center;
       display: flex;
-      flex-direction: column;
-}
-      
-.playlist-container ul {
-      overflow-y: auto;
-      flex-grow: 1;
+      color: #888;
+      background-color: white;
 }
 
-.debug .logo-container {
-      background-color: white;
+#search-container > .search-input > input {
+      flex-grow: 1;
       border: none;
 }
 
-.debug .main-nav-container {
-      background-color: white;
-      color: black;
-}
-
-.debug .aside-bottom-info {
-      background-color: white;
-      color: gray;
-}
-
-.debug .playlist-container {
-      background-color: white;
-      color: gray;
+#search-container > .search-input > * {
+      padding: 6px 5px;
 }
