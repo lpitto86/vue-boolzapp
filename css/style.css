@@ -38,14 +38,6 @@ body {
       align-items: center;
 }
 
-#notifications-container {
-      background-color: #8edafc;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      height: 60px;
-}
-
 aside {
       width: 30%;
       background-color: white;
@@ -54,6 +46,18 @@ aside {
       overflow: hidden;
       display: flex;
       flex-direction: column;
+}
+
+#notifications-container {
+      background-color: #8edafc;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+}
+
+#notification-container > div:last-child {
+      margin-left: 10px;
 }
 
 #search-container > .search-input {
@@ -82,4 +86,19 @@ aside {
 
 .single-conctact.active {
       background-color: #e9ebeb;
+}
+
+.single-conctact img {
+      height: 100%;
+      border-radius: 50%;
+      margin-right: 15px;
+}
+
+.single-conctact > div {
+      flex-grow: 1;
+}
+
+.single-conctact .last-message-time {
+      color: #999;
+      font-size: .7rem;
 }
