@@ -71,3 +71,15 @@ aside {
 #search-container > .search-input > * {
       padding: 6px 5px;
 }
+
+.single-conctact {
+      height: 80px;
+      padding: 10px;
+      display: flex;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+}
+
+.single-conctact.active {
+      background-color: #e9ebeb;
+}
