@@ -55,15 +55,15 @@ body {
 
 #chat-container > section {
       width: 70%;
-      overflow-y: auto;
+      /*overflow-y: auto;*/
 }
 
 #chat-container > section > main {
-      /*flex: 1;*/
-      height: calc(100% - 20px);
+      height: calc(100% - 120px);
       background-image: url(../img/mine.jpg);
       padding: 10px 30px;
       overflow-y: auto;
+      /*overflow: hidden;*/
 }
 
 #chat-container > section > header,
@@ -71,8 +71,12 @@ body {
       height: 60px;
       background-color: #eaeaea;
       display: flex;
-      /*justify-content: space-between;
-      align-items: center;*/
+      align-items: center;
+}
+
+footer {
+      padding: 10px;
+      justify-content: space-around;
 }
 
 a {
@@ -146,4 +150,9 @@ aside {
 .single-contact .last-message-time {
       color: #999;
       font-size: .7rem;
+}
+
+.message-input-container {
+      width: 100%;
+      flex-grow:1;
 }
