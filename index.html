@@ -60,7 +60,7 @@
                               </div>
                         </section>
                         <main>
-                              <div v-for="(contact, i) in contacts" class="single-contact" :class="i == 0 ? ' active ' : ''">
+                              <div v-for="(contact, i) in contacts" class="single-contact" :class="{'active': i == activeContact}">
                                     <img :src="contact.avatar" :alt="contact.name">
                                     <div>
                                           <p>{{ contact.name }}</p>
@@ -129,9 +129,9 @@
                   <section>
                         <header>
                               <div class="single-contact active">
-                                    <img src="img/avatar_1.jpg" alt="Michele">
+                                    <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
                                     <div>
-                                          <h4>Michele</h4>
+                                          <p>{{ contacts[activeContact].name }}</p>
                                           <span class="last-message-time">Ultimo accesso oggi alle 12:00</span>
                                     </div>
                                     <nav>
@@ -189,6 +189,7 @@
       </main>
 
       <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js" integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="js/scripts.js"></script>
 </body>
 </html>

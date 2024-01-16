@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
       data() {
             return {
+                  activeContact: 0,
                   contacts: [
                         {
                               name: 'Michele',
@@ -168,5 +169,9 @@ createApp({
                   ]
                     
             };
+      },
+      mounted() {
+            var DateTime = luxon.DateTime;
+            console.log(DateTime.now());
       }
 }).mount('#app');
