@@ -60,15 +60,15 @@
                               </div>
                         </section>
                         <main>
-                              <div v-for="(elem, i) in contacts" class="single-contact active">
-                                    <img src="img/avatar_1.jpg" alt="Michele">
+                              <div v-for="(contact, i) in contacts" class="single-contact" :class="i == 0 ? ' active ' : ''">
+                                    <img :src="contact.avatar" :alt="contact.name">
                                     <div>
-                                          <h4>Michele</h4>
-                                          <span class="last-message-time">Ultimo messaggio inviato</span>
+                                          <p>{{ contact.name }}</p>
+                                          <p class="last-message-time">Ultimo messaggio inviato</p>
                                     </div>
                                     <span class="last-message-time"> 12:00</span>
                               </div>
-                              <div class="single-contact">
+                              <!-- <div class="single-contact">
                                     <img src="img/avatar_2.jpg" alt="Fabio">
                                     <div>
                                           <h4>Fabio</h4>
@@ -123,7 +123,7 @@
                                           <span class="last-message-time">Ultimo messaggio inviato</span>
                                     </div>
                                     <span class="last-message-time"> 12:00</span>
-                              </div>
+                              </div> -->
                         </main>
                   </aside>
                   <section>
@@ -188,7 +188,7 @@
             </div>
       </main>
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
       <script src="js/scripts.js"></script>
 </body>
 </html>
