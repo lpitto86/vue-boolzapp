@@ -60,7 +60,7 @@
                               </div>
                         </section>
                         <main>
-                              <div class="single-contact active">
+                              <div v-for="(elem, i) in contacts" class="single-contact active">
                                     <img src="img/avatar_1.jpg" alt="Michele">
                                     <div>
                                           <h4>Michele</h4>
@@ -188,6 +188,7 @@
             </div>
       </main>
 
-      <script src="js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script src="js/scripts.js"></script>
 </body>
 </html>
