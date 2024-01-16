@@ -60,7 +60,7 @@
                               </div>
                         </section>
                         <main>
-                              <div v-for="(contact, i) in contacts" class="single-contact" :class="{'active': i == activeContact}">
+                              <div v-for="(contact, i) in contacts" class="single-contact" :class="{'active': i == activeContact}" @click="changeActiveContact(i)">
                                     <img :src="contact.avatar" :alt="contact.name">
                                     <div>
                                           <p>{{ contact.name }}</p>
@@ -156,18 +156,18 @@
                               </div>
                         </header>
                         <main>
-                              <div class="single-message-container sent">
+                              <div v-for="(singleMessage, i) in contacts[activeContact].messages" class="single-message-container" :class="singleMessage.status == 'sent' ? 'sent' : 'received'">
                                     <div class="single-message-item">
-                                          <div class="message-text">Hai portato a spasso il cane?</div>
-                                          <div class="message-time">15:30</div>
+                                          <div class="message-text">{{ singleMessage.message }}</div>
+                                          <div class="message-time">{{ singleMessage.date }}</div>
                                     </div>
                               </div>
-                              <div class="single-message-container received">
+                              <!-- <div class="single-message-container received">
                                     <div class="single-message-item">
                                           <div class="message-text">Tutto fatto!</div>
                                           <div class="message-time">16:15</div>
                                     </div>
-                              </div>
+                              </div> -->
                         </main>
                         <footer>
                               <div>

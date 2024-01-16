@@ -173,5 +173,10 @@ createApp({
       mounted() {
             var DateTime = luxon.DateTime;
             console.log(DateTime.now());
+      },
+      methods: {
+            changeActiveContact(index) {
+                  this.activeContact = index;
+            }
       }
 }).mount('#app');
